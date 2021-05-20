@@ -1,0 +1,16 @@
+.Attribution {
+    .attribution {
+        text-align: center; 
+    }
+
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+    }
+
+    @media screen and (max-width:475px) {
+        .attribution {
+            font-size: 14px;
+        }
+        
+    }
+}

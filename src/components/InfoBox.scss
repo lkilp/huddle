@@ -1,0 +1,110 @@
+.InfoBox {
+    height: 300px;
+    border: 1.5px solid var(--very-pale-cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 0 var(--side-padding);
+    border-radius: 10px;
+
+
+    .left, .right {
+        flex: 1;
+        height: 100%;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        padding: 0 50px;
+    }
+
+    h3 {
+        color: var(--very-dark-cyan);
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+    }
+
+    p {
+        color: var(--grayish-blue);
+        
+    }
+
+    .right {
+        background-size: 55%;
+        background-repeat: no-repeat;
+        background-position: right center;
+
+        &.grow-together {
+            background-image: url("../assets/images/illustration-grow-together.svg"); 
+        }
+
+        &.flowing-conversations {
+            background-image: url("../assets/images/illustration-flowing-conversation.svg");
+        }
+
+        &.your-users {
+            background-image: url("../assets/images/illustration-your-users.svg");
+        }
+    }
+
+    &:nth-child(even) {
+        .left {
+            order: 1;
+            padding-right: 0;
+        }
+
+        .right {
+            background-position: center left;
+            margin-left: 50px;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        & {
+            padding: 0 var(--mobile-side-padding);
+        }
+        .right {
+            background-size: 80%;
+        } 
+    }
+
+    @media screen and (max-width: 1000px) {
+        .right {
+            background-size: 100%;
+        }
+        
+    }
+
+    @media screen and (max-width: 475px) {
+        & {
+            flex-direction: column;
+            padding: 20px;
+            height: 450px;
+            box-shadow: 0 0 5px 0.1px var(--very-pale-cyan);
+            text-align: center;
+            margin: 40px 0;
+            border-radius: 20px;
+        }
+
+        .left {
+            order: 1;
+            padding: 0;
+        }
+
+        .right {
+            width: 100%;
+            background-position: center;
+        }
+        
+        &:nth-child(even) {
+            .right {
+                margin: 0;
+                background-position: center;
+            }
+        }
+    }
+}

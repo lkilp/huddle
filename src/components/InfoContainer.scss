@@ -1,0 +1,22 @@
+.InfoContainer {
+    padding: 100px var(--side-padding) 200px var(--side-padding);
+ 
+    .island-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 475px) {
+        & {
+            padding: 30px var(--mobile-side-padding) 170px var(--mobile-side-padding);
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        & {
+            padding-left: var(--mobile-side-padding);
+            padding-right: var(--mobile-side-padding); 
+        }
+        
+    }
+}

@@ -1,0 +1,64 @@
+.Island {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    border: 1.5px solid var(--very-pale-cyan);
+    position: absolute;
+    padding: 30px 100px;
+    margin-top: 75px;
+    font-family: 'Poppins', sans-serif;
+
+    h2 {
+        color: var(--very-dark-cyan);
+    }
+
+    .get-started-button {
+        color: white;
+        font-weight: 700;
+        background-color: var(--pink);
+        border-radius: 50px;
+        margin-top: 15px;
+        height: 70px;
+        border: none;
+        box-shadow: 0 2px 5px 0.1px var(--grayish-blue);
+        font-size: 18px;
+        padding: 0 70px;
+        white-space: nowrap;
+        text-align: center;
+
+        &:hover {
+            background-color: var(--light-pink);
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (max-width: 475px) {
+        & {
+            flex: 1;
+            padding: 40px 10px;
+            box-shadow: 0 0 5px 0.1px var(--very-pale-cyan);
+            text-align: center;
+            border-radius: 20px;
+        }
+        .get-started-button {
+            height: 50px;
+            font-size: 16px;
+           
+        }
+         h2 {
+            font-size: 20px;
+            margin: 0px;
+            padding: 0;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        & {
+            padding: 30px var(--mobile-side-padding);
+        }
+        
+    }
+}

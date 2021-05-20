@@ -1,0 +1,140 @@
+.Footer {
+    background-color: var(--very-dark-cyan);
+    color: white;
+    padding: 170px var(--side-padding) 60px;
+
+
+    .white-huddle-logo {
+        filter: brightness(0) invert(1);
+        padding-bottom: 50px;
+    }
+
+    .flex-container {
+        display: flex;
+        font-weight: 700;
+        padding-right: 100px;
+    }
+
+    .contacts {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .contacts-grid {
+        display: grid;
+        grid-template-columns: 5% 1fr;
+        padding-right: 100px;
+        padding-bottom: 20px;
+        grid-gap: 10px;
+    }
+
+    .grid-container {
+        display: grid;
+        flex: 1;
+        grid-template-columns: repeat(2, 1fr) ;
+        grid-template-rows: repeat(4, 1fr);
+        justify-items: start;
+        align-items: start;  
+    }
+
+    .grid-container>div:hover {
+            cursor: pointer;
+            text-decoration: underline;
+    }
+
+    .icon {
+        margin-top: 5px;
+    }
+
+    .symbols {
+        width: 150px;
+        display: flex;
+    }
+
+    .circle {
+        --size: 30px;
+        height: var(--size);
+        width: var(--size);
+        border: 2px solid white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+
+        &:hover {
+            cursor: pointer;
+            border: 2px solid var(--pink);
+            color: var(--pink);
+        }
+    }
+
+    .copyright {
+        text-align: right;
+    }
+
+    i {
+        height: 20px;
+        width: 20px;
+    }
+
+    @media screen and (max-width: 475px) {
+        & {
+            padding: 150px var(--mobile-side-padding) 50px;
+        }
+        
+        .white-huddle-logo {
+            padding-bottom: 20px;
+        }
+        .flex-container {
+            flex-direction: column;
+            padding: 0;
+            font-weight: 400;
+        }
+
+        .contacts {
+            padding-bottom: 30px;
+        }
+
+        .contacts-grid {
+            padding-right: 0;
+            grid-template-columns: 10% 1fr;
+        }
+
+        .grid-container {
+            grid-template-columns: 1fr;
+            padding-bottom: 30px;
+
+            &>div {
+                padding: 15px 0;
+            }
+        }
+
+        .symbols {
+            align-self: center;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 14px;
+            padding-top: 20px;
+        }
+    }
+
+
+    @media screen and (max-width: 750px) {
+        & {
+            padding: 150px var(--mobile-side-padding) 50px;
+        }
+
+        .flex-container {
+            padding-right: 0;
+        }
+        .contacts-grid {
+            padding-right: 0;
+            grid-template-columns: 10% 1fr;
+        }
+    }
+}
+

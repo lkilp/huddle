@@ -1,0 +1,116 @@
+.Header {
+
+    height: 700px;
+
+    .background-pattern {
+        background-image: url("../assets/images/bg-hero-desktop.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .filter {
+        background-color: var(--very-pale-cyan);
+        height: 100%;
+    }
+
+    .content {
+        height: 550px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 var(--side-padding);
+    }
+
+    .left, .right {
+        height: 100%;
+    }
+
+    .left {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        width: 45%;
+        padding-right: 20px;
+
+        h1 {
+            color: var(--very-dark-cyan);
+            font-family: 'Poppins', sans-serif;
+            text-align: left;
+        }
+
+    }
+
+    .get-started-button {
+        color: white;
+        font-weight: 700;
+        background-color: var(--pink);
+        border-radius: 50px;
+        margin-top: 15px;
+        height: 50px;
+        padding: 0 50px;
+        border: none;
+        box-shadow: 0 0 5px 0.1px var(--grayish-blue);
+        font-size: 18px;
+
+        &:hover {
+            background-color: var(--light-pink);
+            cursor: pointer;
+        }
+    }
+
+    .right {
+        background: url("../assets/images/illustration-mockups.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 100%;
+        width: 55%;
+        background-position: center;
+    }
+
+    @media screen and (max-width: 475px) {
+        height: 100%;
+        
+
+        .content {
+            flex-direction: column;
+            height: 100%;
+            padding: 50px var(--mobile-side-padding) 30px;
+        }
+
+        .left, .right {
+            width: 100%;
+        }
+
+        .left {
+            text-align: center;
+            padding: 0 var(--mobile-side-padding) 40px ;
+
+            h1 {
+                font-size: 26px;
+                text-align: center;
+            }
+        }
+
+        .get-started-button {
+            font-size: 16px;
+        }
+
+        .right {
+            height: 250px;
+            background-size: 90%;
+            // padding: 0 var(--mobile-side-padding);
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .content {
+            padding: var(--mobile-side-padding);
+        }
+        
+    }
+  
+}

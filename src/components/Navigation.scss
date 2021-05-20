@@ -1,0 +1,49 @@
+.Navigation {
+    height: 50px;
+    padding: 50px var(--side-padding);   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .try-it-button {
+        height: 40px;
+        color: var(--very-dark-cyan);
+        font-weight: 700;
+        background-color: white;
+        border-radius: 50px;
+        border: none;
+        box-shadow: 0 0 5px 0.1px var(--grayish-blue);
+        font-size: 18px;
+        padding: 0 50px;
+
+        &:hover {
+            color: var(--grayish-blue);
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (max-width: 475px) {
+        & {
+            padding: var(--mobile-side-padding);
+        }
+
+        img {
+            height: 25px;
+        }
+
+        .try-it-button {
+            height: 30px;
+            padding: 0 25px;
+            font-size: 16px;
+        }
+        
+    }
+
+    @media screen and(max-width: 750px) {
+        & {
+            padding: 40px var(--mobile-side-padding);
+        }
+        
+    }
+
+}
